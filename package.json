@@ -1,0 +1,26 @@
+{
+  "name": "thebluemarble-website",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/bun": "^1.2.13",
+    "bun-types": "^1.2.19",
+    "concurrently": "^9.1.2"
+  },
+  "author": {
+    "name": "crqch",
+    "url": "https://github.com/crqch/"
+  },
+  "version": "0.1",
+  "scripts": {
+    "clean": "rm -rf node_modules packages/server/node_modules packages/client/node_modules",
+    "dev:client": "cd packages/client && bun run dev",
+    "dev": "bun run dev:client"
+  },
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "typescript": "^5.9.0-beta"
+  }
+}
