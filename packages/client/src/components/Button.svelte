@@ -7,7 +7,7 @@
     itemBefore,
     itemAfter,
     className,
-    iconAnimations = true,
+    iconAnimations = false,
     ...props
   }: {
     children?: Snippet | Snippet[];

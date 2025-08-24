@@ -61,6 +61,7 @@
     }}
   >
     <Button
+      iconAnimations
       onclick={() => goto("#install")}
       className="btn-neutral btn-lg min-w-80"
       >Install
