@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from "$app/state";
+  import { NuqsAdapter } from "nuqs-svelte/adapters/svelte-kit";
   import { Toaster } from "svelte-sonner";
   import "../app.css";
   import Modal from "../components/ModalContext.svelte";
@@ -8,16 +9,18 @@
   const { children } = $props();
 </script>
 
-<main class="scroll-smooth">
-  <Toaster
-    toastOptions={{
-      class:
-        "!bg-base-100 !rounded-box border !border-base-300 !text-base-content",
-    }}
-  />
-  <Modal />
-  {@render children()}
-</main>
+<NuqsAdapter>
+  <main class="scroll-smooth">
+    <Toaster
+      toastOptions={{
+        class:
+          "!bg-base-100 !rounded-box border !border-base-300 !text-base-content",
+      }}
+    />
+    <Modal />
+    {@render children()}
+  </main>
+</NuqsAdapter>
 
 <div style="display:none">
   {#each locales as locale}
