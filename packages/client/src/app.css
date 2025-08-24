@@ -40,99 +40,110 @@
 } */
 
 @plugin "daisyui/theme" {
-  name: "dark";
-  default: true;
-  prefersdark: false;
-  color-scheme: "dark";
- --color-base-100: oklch(0.17 0.03 265.24);
-  --color-base-200: oklch(19.314% 0.037 265.754);
-  --color-base-300: oklch(0.21 0.03 265.53);
-  --color-base-content: oklch(84.153% 0.007 265.754);
-  --color-primary: oklch(0.69 0.16 241.16);
-  --color-primary-content: oklch(19.314% 0.037 265.754);
-  --color-secondary: oklch(60.682% 0.108 309.782);
-  --color-secondary-content: oklch(96% 0.016 293.756);
-  --color-accent: oklch(93.426% 0.102 94.555);
-  --color-accent-content: oklch(18.685% 0.02 94.555);
-  --color-neutral: oklch(0.95 0.03 227);
-  --color-neutral-content: oklch(0 0 0);
-  --color-info: oklch(93% 0.034 272.788);
-  --color-info-content: oklch(54% 0.245 262.881);
-  --color-success: oklch(96% 0.067 122.328);
-  --color-success-content: oklch(52% 0.154 150.069);
-  --color-warning: oklch(0.96 0.12 103.78);
-  --color-warning-content: oklch(55% 0.163 48.998);
-  --color-error: oklch(93% 0.032 17.717);
-  --color-error-content: oklch(44% 0.177 26.899);
-  --radius-selector: 1rem;
-  --radius-field: 0.5rem;
-  --radius-box: 1rem;
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
-  --border: 1px;
-  --depth: 1;
-  --noise: 0;
+    name: "dark";
+    default: true;
+    prefersdark: false;
+    color-scheme: "dark";
+    --color-base-100: oklch(0.17 0.03 265.24);
+    --color-base-200: oklch(19.314% 0.037 265.754);
+    --color-base-300: oklch(0.21 0.03 265.53);
+    --color-base-content: oklch(84.153% 0.007 265.754);
+    --color-primary: oklch(0.69 0.16 241.16);
+    --color-primary-content: oklch(19.314% 0.037 265.754);
+    --color-secondary: oklch(60.682% 0.108 309.782);
+    --color-secondary-content: oklch(96% 0.016 293.756);
+    --color-accent: oklch(93.426% 0.102 94.555);
+    --color-accent-content: oklch(18.685% 0.02 94.555);
+    --color-neutral: oklch(0.95 0.03 227);
+    --color-neutral-content: oklch(0 0 0);
+    --color-info: oklch(93% 0.034 272.788);
+    --color-info-content: oklch(54% 0.245 262.881);
+    --color-success: oklch(96% 0.067 122.328);
+    --color-success-content: oklch(52% 0.154 150.069);
+    --color-warning: oklch(0.96 0.12 103.78);
+    --color-warning-content: oklch(55% 0.163 48.998);
+    --color-error: oklch(93% 0.032 17.717);
+    --color-error-content: oklch(44% 0.177 26.899);
+    --radius-selector: 1rem;
+    --radius-field: 0.5rem;
+    --radius-box: 1rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 1;
+    --noise: 0;
 }
 
 body {
     font-family: "Space Grotesk", sans-serif;
-  }
+}
 
 code,
 pre {
-  font-family: "Fira Mono", monospace;
+    font-family: "Fira Mono", monospace;
 }
 
 @layer components {
-  input {
-    @apply focus:ring-0 focus-visible:ring-0;
-  }
+    input {
+        @apply focus:ring-0 focus-visible:ring-0;
+    }
 
-  label > input {
-    @apply !border-l-[2px] !border-l-white/20 focus:!border-l-secondary focus-visible:!border-l-secondary;
-  }
+    label > input {
+        @apply !border-l-[2px] !border-l-white/20 focus:!border-l-secondary focus-visible:!border-l-secondary;
+    }
 }
 
-
 @utility input {
-  @apply outline-0 focus:outline-0 focus:border-primary focus-visible:outline-0 focus-visible:border-primary focus-within:outline-0 focus-within:border-primary transition-colors;
+    @apply outline-0 focus:outline-0 focus:border-primary focus-visible:outline-0 focus-visible:border-primary focus-within:outline-0 focus-within:border-primary transition-colors;
 }
 
 @utility textarea {
-  @apply outline-0 focus:outline-0 focus:border-primary focus-visible:outline-0 focus-visible:border-primary focus-within:outline-0 focus-within:border-primary transition-colors;
+    @apply outline-0 focus:outline-0 focus:border-primary focus-visible:outline-0 focus-visible:border-primary focus-within:outline-0 focus-within:border-primary transition-colors;
 }
 
 @utility select {
-  @apply outline-0 p-0 px-2 focus:outline-0 focus:border-primary focus-visible:outline-0 focus-visible:border-primary focus-within:outline-0 focus-within:border-primary transition-colors;
+    @apply outline-0 p-0 px-2 focus:outline-0 focus:border-primary focus-visible:outline-0 focus-visible:border-primary focus-within:outline-0 focus-within:border-primary transition-colors;
 }
 
 @utility btn-outline {
-  @apply border border-base-300;
+    @apply border border-base-300;
 }
 
 @utility btn-primary {
-  @apply border border-primary-content/20;
+    @apply border border-primary-content/20;
 }
 
 @utility href {
-  @apply underline underline-offset-2 decoration-primary decoration-dotted hover:bg-primary/20 p-px;
+    @apply underline underline-offset-2 decoration-primary decoration-dotted hover:bg-primary/20 p-px;
 }
 
 @utility href-white {
-  @apply underline underline-offset-2 decoration-base-content decoration-dotted hover:bg-base-content/60 p-px;
+    @apply underline underline-offset-2 decoration-base-content decoration-dotted hover:bg-base-content/60 p-px;
 }
 
 @-moz-keyframes spin {
-    from { -moz-transform: rotate(0deg); }
-    to { -moz-transform: rotate(360deg); }
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
 }
 @-webkit-keyframes spin {
-    from { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(360deg); }
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
 }
 @keyframes spin {
-    from {transform:rotate(0deg);}
-    to {transform:rotate(360deg);}
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes pulse {

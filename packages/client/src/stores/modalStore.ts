@@ -1,6 +1,6 @@
 // src/stores/modalStore.ts
-import type { Snippet } from "svelte";
-import { writable } from "svelte/store";
+import type { Snippet } from "svelte"
+import { writable } from "svelte/store"
 
 /**
  * Defines the structure for a button within the modal.
@@ -9,10 +9,10 @@ import { writable } from "svelte/store";
  * @property {string} [className] - Optional Tailwind CSS classes for styling the button (e.g., "btn-primary", "btn-ghost").
  */
 export type ModalButton = {
-    text: string;
-    onClick: () => void;
-    className?: string;
-};
+    text: string
+    onClick: () => void
+    className?: string
+}
 
 /**
  * Defines the state structure for the modal.
@@ -22,11 +22,11 @@ export type ModalButton = {
  * @property {ModalButton[]} buttons - An array of button configurations to display at the bottom of the modal.
  */
 export type ModalState = {
-    shown: boolean;
-    title: string;
-    content: string | Snippet; // Changed type from ReturnType<Snippet> to Snippet
-    buttons: ModalButton[];
-};
+    shown: boolean
+    title: string
+    content: string | Snippet // Changed type from ReturnType<Snippet> to Snippet
+    buttons: ModalButton[]
+}
 
 /**
  * The writable Svelte store that holds the current state of the modal.
@@ -37,18 +37,18 @@ export const modalStore = writable<ModalState>({
     title: "",
     content: "",
     buttons: [],
-});
+})
 
 /**
  * Displays the modal with the specified content, title, and buttons.
  * This is the primary function to call from your components to open the modal.
  * @param {Omit<ModalState, 'shown'>} options - An object containing the modal's title, content, and button configurations.
  */
-export function showModal(options: Omit<ModalState, 'shown'>) {
+export function showModal(options: Omit<ModalState, "shown">) {
     modalStore.set({
         ...options,
         shown: true, // Always set to true when showing the modal
-    });
+    })
 }
 
 /**
@@ -57,5 +57,5 @@ export function showModal(options: Omit<ModalState, 'shown'>) {
  * You can also call it manually to programmatically close the modal.
  */
 export function hideModal() {
-    modalStore.update(state => ({ ...state, shown: false }));
+    modalStore.update((state) => ({ ...state, shown: false }))
 }

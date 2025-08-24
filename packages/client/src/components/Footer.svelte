@@ -1,4 +1,5 @@
 <script>
+  import { m } from "../paraglide/messages";
   import PixelsTransition from "./PixelsTransition.svelte";
 </script>
 
@@ -16,53 +17,48 @@
         Blue Marble
       </a>
       <p>
-        Project maintained by <a
-          href="https://github.com/SwingTheVine"
-          target="_blank"
-          class="href-white">SwingTheVine</a
-        >
+        {@html m.footer_maintainedby_project()}
       </p>
       <p>
-        Website maintained by <a
-          href="https://github.com/crqch"
-          target="_blank"
-          class="href-white">crqch</a
-        >
+        {@html m.footer_maintainedby_website()}
       </p>
     </div>
     <div class="flex flex-col items-start gap-2">
-      <b class="font-mono border-b border-b-primary-content/40 w-full">GUIDES</b
+      <b class="font-mono border-b border-b-primary-content/40 w-full"
+        >{m.footer_guides()}</b
       >
-      <a href="#install" class="href-white">Installing</a>
-      <a href="#usage" class="href-white">Using</a>
-      <a href="#support" class="href-white">Getting Support</a>
+      <a href="#install" class="href-white">{m.footer_guides_installing()}</a>
+      <a href="#usage" class="href-white">{m.footer_guides_using()}</a>
+      <a href="#support" class="href-white"
+        >{m.footer_guides_gettingsupport()}</a
+      >
     </div>
     <div class="flex flex-col items-start gap-2">
       <b class="font-mono border-b border-b-primary-content/40 w-full"
-        >PROJECT</b
+        >{m.footer_project()}</b
       >
-      <a href="#contributing" class="href-white">Join the Community</a>
-      <a href="#contributing" class="href-white">Get involved</a>
-      <a href="#security" class="href-white">Report a Vulnerability</a>
+      <a href="#contributing" class="href-white"
+        >{m.footer_project_community()}</a
+      >
+      <a href="#contributing" class="href-white"
+        >{m.footer_project_contribute()}</a
+      >
+      <a href="#security" class="href-white">{m.footer_project_report()}</a>
     </div>
     <div class="flex flex-col items-start gap-2">
       <b class="font-mono border-b border-b-primary-content/40 w-full"
-        >WEBSITE</b
+        >{m.footer_website()}</b
       >
       <a
         href="https://github.com/crqch/bluemarble-website"
         target="_blank"
-        class="href-white">Source Code</a
+        class="href-white">{m.footer_website_source()}</a
       >
-      <a href="privacy-policy" class="href-white">Privacy Policy</a>
+      <a href="privacy-policy" class="href-white"
+        >{m.footer_website_privacypolicy()}</a
+      >
     </div>
   </div>
-  <code class="text-sm">open source <u><b><i>rocks</i></b></u>!</code>
-  <code class="text-sm"
-    >made with 🧉 by <a
-      class="href"
-      target="_blank"
-      href="https://github.com/crqch">crqch</a
-    ></code
-  >
+  <code class="text-sm">{@html m.footer_opensourcerocks()}</code>
+  <code class="text-sm">{@html m.footer_madebycrqch()}</code>
 </footer>
