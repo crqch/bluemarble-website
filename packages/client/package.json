@@ -43,6 +43,7 @@
     "dependencies": {
         "@lucide/svelte": "^0.525.0",
         "@polar-sh/sveltekit": "^0.4.3",
+        "@sveltejs/adapter-cloudflare": "^7.2.2",
         "@tanstack/svelte-form": "^1.14.2",
         "daisyui": "^5.0.46",
         "motion": "^12.23.12",
