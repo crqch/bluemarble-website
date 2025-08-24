@@ -33,27 +33,47 @@
       }
     }
   };
+  let observerElement: HTMLElement;
+  let appeared = $state(false);
 
   onMount(() => {
-    regenerate();
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !appeared) {
+          regenerate();
+          appeared = true;
+        }
+      },
+      {
+        rootMargin: "0px 0px 10px 0px",
+        threshold: 1.0,
+      }
+    );
+
+    if (observerElement) {
+      observer.observe(observerElement);
+    }
+    return () => {
+      if (observerElement) {
+        observer.unobserve(observerElement);
+      }
+    };
   });
 </script>
 
+<div bind:this={observerElement}></div>
+
 <div
   onclickcapture={regenerate}
-  class="flex flex-col items-start relative top-0 left-1/2 -translate-x-1/2 overflow-x-hidden bg-base-300 gap-px py-px h-[calc(166px)]"
+  class="flex flex-col items-start relative top-0 left-1/2 -translate-x-1/2 overflow-x-hidden py-px bg-base-300 gap-px h-[calc(165px)]"
 >
   {#each blocks as row}
     <div class="flex gap-px">
       {#each row as blockColor}
         <div
-          class="size-10 relative cursor-pointer group"
+          class="size-10 relative before:absolute before:inset-0 before:bg-white before:opacity-0 hover:before:opacity-10 before:transition-opacity active:before:opacity-20 cursor-pointer group"
           style="background: {blockColor}"
-        >
-          <div
-            class="absolute inset-0 bg-white opacity-0 transition-opacity group-hover:opacity-20 group-active:opacity-40"
-          ></div>
-        </div>
+        ></div>
       {/each}
     </div>
   {/each}
