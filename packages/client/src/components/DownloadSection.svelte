@@ -6,10 +6,10 @@
     const browser = useQueryState("browser")
 
     let getClassesForButton = (v: string) => [
-        "hover:scale-[.98] relative before:absolute overflow-hidden before:inset-0 bg-base-100 active:scale-[.98] group cursor-pointer transition-all p-4 rounded-box border border-base-200 outline-2 flex flex-col gap-2",
+        "hover:scale-[.98] relative before:absolute overflow-hidden before:inset-0 bg-base-100 focus:scale-[.98] active:scale-[.98] group cursor-pointer transition-all p-4 rounded-box border border-base-200 outline-2 flex flex-col gap-2",
         browser.current === v
-            ? "before:bg-base-content/5 hover:before:bg-base-content/15 active:before:bg-base-content/15 scale-[.98] outline-primary"
-            : "hover:before:bg-base-content/5 active:before:bg-base-content/5 outline-transparent",
+            ? "before:bg-base-content/5 hover:before:bg-base-content/15 focus:before:bg-base-content/15 active:before:bg-base-content/15 scale-[.98] outline-primary"
+            : "hover:before:bg-base-content/5 active:before:bg-base-content/5 focus:before:bg-base-content/5 outline-transparent",
     ]
 
     const buttonClick = (value: string) =>
@@ -22,7 +22,7 @@
 >
     <code class="text-primary scale-y-[.85]">{m.install_subtitle()}</code>
     <h1 class="text-4xl font-semibold">{m.install_title()}</h1>
-    <div class="z-50 flex flex-col md:flex-row gap-8 mt-4">
+    <div class="flex flex-col md:flex-row gap-8 mt-4">
         <button
             onclick={() => buttonClick("c")}
             class={getClassesForButton("c")}
