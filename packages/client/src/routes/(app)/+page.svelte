@@ -42,7 +42,7 @@
             delay: 0.3,
             duration: 0.6,
         }}
-        class="text-2xl md:text-4xl xl:text-6xl font-bold text-white drop-shadow-[0_0_20px_rgba(0,0,0,0.6)]"
+        class="text-4xl md:text-6xl lg:text-8xl font-bold text-white drop-shadow-[0_0_20px_rgba(0,0,0,0.6)]"
     >
         {m.home_section1_title()}
     </h1>
