@@ -1,6 +1,6 @@
 {
     "$schema": "node_modules/wrangler/config-schema.json",
-    "name": "svelte-guestbook",
+    "name": "bluemarble",
     "main": "packages/client/.svelte-kit/cloudflare/_worker.js",
     "compatibility_date": "2025-04-06",
     "compatibility_flags": ["nodejs_compat"],
