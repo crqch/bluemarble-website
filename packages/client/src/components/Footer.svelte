@@ -7,7 +7,7 @@
 <PixelsTransition from="var(--color-base-100)" to="var(--color-primary)" />
 <footer class="flex flex-col w-full items-center gap-[2px] bg-base-200/50">
     <div
-        class="flex flex-col md:flex-row gap-4 w-full bg-primary text-primary-content py-10 lg:px-40 md:px-20 px-4"
+        class="flex flex-col lg:flex-row gap-16 md:gap-8 lg:gap-4 w-full bg-primary text-primary-content py-10 lg:px-40 md:px-20 px-4"
     >
         <div class="flex flex-col flex-1 items-start gap-2">
             <a
@@ -50,7 +50,7 @@
             <b class="font-mono border-b border-b-primary-content/40 w-full"
                 >{m.footer_project()}</b
             >
-            <a href="#contributing" class="href-white"
+            <a href="#support" class="href-white"
                 >{m.footer_project_community()}</a
             >
             <a href="#contributing" class="href-white"
