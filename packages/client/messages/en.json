@@ -93,5 +93,6 @@
     "install_edge_step7": "Drag the <span class=\"font-mono bg-base-content/10 rounded-md\">BlueMarble.user.js</span> file inside the dashboard of TamperMonkey.",
     "install_edge_step8": "Click the <i>Install</i> button to install Blue Marble.",
     "install_edge_step9": "Enable Blue Marble inside the TamperMonkey dashboard.",
-    "install_refresh": "Refresh the <a href=\"https://wplace.live/\" target=\"_blank\" class=\"href\">wplace.live</a> webpage."
+    "install_refresh": "Refresh the <a href=\"https://wplace.live/\" target=\"_blank\" class=\"href\">wplace.live</a> webpage.",
+    "home_section4_github": "GitHub Discussions"
 }

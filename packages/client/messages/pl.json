@@ -36,6 +36,7 @@
     "home_section4_subtitle": "WSPARCIE",
     "home_section4_title": "Jeśli masz jakiś problem, napisz do nas!",
     "home_section4_members": "PONAD 3000 CZŁONKÓW",
+    "home_section4_github": "Dyskusje GitHub",
     "home_section5_subtitle": "BEZPIECZEŃSTWO",
     "home_section5_title": "Zgłaszanie luki w zabezpieczeniach",
     "home_section5_description": "Ponieważ jest to skrypt użytkownika, nie będzie wielu luk w zabezpieczeniach. Użytkownik sam decyduje o swoim bezpieczeństwie, wybierając, które skrypty uruchomić. Niezależnie od tego, jeśli znajdziesz lukę w zabezpieczeniach Blue Marble, zgłoś ją w zakładce <a href=\"https://github.com/SwingTheVine/Wplace-BlueMarble/security/advisories/new\" class=\"href\" target=\"_blank\">„Zgłoś lukę”</a> w sekcji „Porady bezpieczeństwa GitHub”.",
