@@ -1,6 +1,6 @@
 # Contributing
 
-New features and major changes will probably be made solely by @crqch in accordance with @SwingTheVine, to maintain the project's goal.
+New features and major changes will probably be made solely by [@crqch](https://github.com/crqch) in accordance with [@SwingTheVine](https://github.com/SwingTheVine), to maintain the project's goal.
 
 Anyway, things that are needed to be done can be accessed in the 'Issues' tab of the repository.
 
