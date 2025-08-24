@@ -9,6 +9,10 @@
   const { children } = $props();
 </script>
 
+<svelte:head>
+  <title>Blue Marble</title>
+</svelte:head>
+
 <NuqsAdapter>
   <main class="scroll-smooth">
     <Toaster
