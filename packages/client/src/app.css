@@ -49,21 +49,21 @@
   --color-base-300: oklch(0.21 0.03 265.53);
   --color-base-content: oklch(84.153% 0.007 265.754);
   --color-primary: oklch(0.69 0.16 241.16);
-  --color-primary-content: oklch(0.34 0.07 229.52);
+  --color-primary-content: oklch(19.314% 0.037 265.754);
   --color-secondary: oklch(60.682% 0.108 309.782);
   --color-secondary-content: oklch(96% 0.016 293.756);
   --color-accent: oklch(93.426% 0.102 94.555);
   --color-accent-content: oklch(18.685% 0.02 94.555);
   --color-neutral: oklch(0.95 0.03 227);
   --color-neutral-content: oklch(0 0 0);
-  --color-info: oklch(54.615% 0.215 262.88);
-  --color-info-content: oklch(90.923% 0.043 262.88);
-  --color-success: oklch(62.705% 0.169 149.213);
-  --color-success-content: oklch(12.541% 0.033 149.213);
-  --color-warning: oklch(66.584% 0.157 58.318);
-  --color-warning-content: oklch(27% 0.077 45.635);
-  --color-error: oklch(73.95% 0.19 27.33);
-  --color-error-content: oklch(14.79% 0.038 27.33);
+  --color-info: oklch(93% 0.034 272.788);
+  --color-info-content: oklch(54% 0.245 262.881);
+  --color-success: oklch(96% 0.067 122.328);
+  --color-success-content: oklch(52% 0.154 150.069);
+  --color-warning: oklch(0.96 0.12 103.78);
+  --color-warning-content: oklch(55% 0.163 48.998);
+  --color-error: oklch(93% 0.032 17.717);
+  --color-error-content: oklch(44% 0.177 26.899);
   --radius-selector: 1rem;
   --radius-field: 0.5rem;
   --radius-box: 1rem;
@@ -116,6 +116,10 @@ pre {
 
 @utility href {
   @apply underline underline-offset-2 decoration-primary decoration-dotted hover:bg-primary/20 p-px;
+}
+
+@utility href-white {
+  @apply underline underline-offset-2 decoration-base-content decoration-dotted hover:bg-base-content/60 p-px;
 }
 
 @-moz-keyframes spin {
