@@ -5,21 +5,20 @@
     import { m } from "../paraglide/messages"
     import { getLocale, locales, setLocale } from "../paraglide/runtime"
 
-    let heroHide = $derived(
-        page.url.pathname === "/" && scrollY.current !== undefined
+    // Derive the scroll progress, defaulting scrollY.current to 0 on initial load.
+    let scrollProgress = $derived(
+        Math.min(Math.max((scrollY?.current ?? 0) - 100) / 100, 1)
     )
 
-    let scrollProgress = $derived(
-        Math.min(Math.max((scrollY?.current || 0) - 100) / 100, 1) // clamp at 1 after 200px
+    // Derive a single translateY value based on page and scroll position.
+    let navTranslateY = $derived(
+        page.url.pathname === "/" ? (1 - scrollProgress) * -40 : 0
     )
 </script>
 
 <motion.nav
-    animate={heroHide
-        ? {
-              y: (1 - scrollProgress) * -40,
-          }
-        : {}}
+    initial={{ y: navTranslateY }}
+    animate={{ y: navTranslateY }}
     transition={{
         type: "spring",
         stiffness: 120,
