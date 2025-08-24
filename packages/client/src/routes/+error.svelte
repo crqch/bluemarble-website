@@ -1,10 +1,13 @@
 <script>
+  import { goto } from "$app/navigation";
   import { page } from "$app/state";
   import { Home, RefreshCcw } from "@lucide/svelte";
   import Button from "../components/Button.svelte";
 </script>
 
-<div class="flex flex-col w-full min-h-screen items-center justify-center">
+<div
+  class="flex flex-col w-full min-h-screen items-center justify-center bg-[radial-gradient(circle,_rgba(255,255,255,0.1)_1px,_transparent_1px)] [background-size:36px_36px]"
+>
   <div
     class="flex flex-col border bg-base-200 border-base-300 rounded-box p-8 gap-4"
   >
@@ -21,7 +24,7 @@
       {/snippet}
       Refresh the page
     </Button>
-    <Button onclick={() => window.location.reload()}>
+    <Button onclick={() => goto("/")}>
       {#snippet itemBefore()}
         <Home class="w-4 h-4" />
       {/snippet}
