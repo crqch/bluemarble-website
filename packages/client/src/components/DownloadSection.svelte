@@ -1,9 +1,8 @@
 <script lang="ts">
   import { useQueryState } from "nuqs-svelte";
+  import DownloadCard from "./DownloadCard.svelte";
 
   const browser = useQueryState("browser");
-  const boxClass =
-    "flex flex-col p-4 w-full items-center rounded-box border border-base-200 gap-2";
 
   let getClassesForButton = (v: string) => [
     "hover:scale-[.98] relative before:absolute overflow-hidden before:inset-0 bg-base-100 active:scale-[.98] group cursor-pointer transition-all p-4 rounded-box border border-base-200 outline-2 flex flex-col gap-2",
@@ -11,13 +10,19 @@
       ? "before:bg-base-content/5 hover:before:bg-base-content/15 active:before:bg-base-content/15 scale-[.98] outline-primary"
       : "hover:before:bg-base-content/5 active:before:bg-base-content/5 outline-transparent",
   ];
+
+  const buttonClick = (value: string) =>
+    browser.current === value ? browser.set(null) : browser.set(value);
 </script>
 
-<section class="flex flex-col items-center md:px-20 lg:px-40 px-4 py-10 gap-4">
+<section
+  id="install"
+  class="flex flex-col items-center md:px-20 lg:px-40 px-4 py-10 gap-4"
+>
   <code class="text-primary scale-y-[.85]">INSTALL OPTIONS</code>
   <h1 class="text-4xl font-semibold">Pick your browser</h1>
-  <div class="z-50 flex gap-8 items-center mt-4">
-    <button onclick={() => browser.set("c")} class={getClassesForButton("c")}>
+  <div class="z-50 flex flex-col md:flex-row gap-8 mt-4">
+    <button onclick={() => buttonClick("c")} class={getClassesForButton("c")}>
       <h2 class="text-2xl">Chromium based</h2>
       <div
         class="flex gap-2 opacity-50 group-hover:opacity-80 transition-opacity"
@@ -175,7 +180,7 @@
         >
       </div>
     </button>
-    <button onclick={() => browser.set("f")} class={getClassesForButton("f")}>
+    <button onclick={() => buttonClick("f")} class={getClassesForButton("f")}>
       <h2 class="text-2xl">Firefox based</h2>
       <div
         class="flex gap-2 opacity-50 group-hover:opacity-80 transition-opacity"
@@ -466,7 +471,7 @@
         >
       </div>
     </button>
-    <button onclick={() => browser.set("e")} class={getClassesForButton("e")}>
+    <button onclick={() => buttonClick("e")} class={getClassesForButton("e")}>
       <h2 class="text-2xl">Microsoft Edge</h2>
       <div
         class="flex gap-2 opacity-50 group-hover:opacity-80 transition-opacity"
@@ -586,14 +591,15 @@
     </button>
   </div>
 
-  {#if browser !== null}
+  {#if browser.current !== null}
     <div class="flex flex-col items-center gap-4 mt-6">
       {#if browser.current === "c"}
-        <div class={boxClass}>
+        <DownloadCard>
           <h2 class="text-3xl">
             <b class="text-primary">1.</b> Install
             <a
               href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+              target="_blank"
               class="href">TamperMonkey for Chrome</a
             >
           </h2>
@@ -603,8 +609,8 @@
             alt=""
             class="w-full mt-2 opacity-50 rounded-box"
           />
-        </div>
-        <div class={boxClass}>
+        </DownloadCard>
+        <DownloadCard>
           <h2 class="text-3xl">
             <b class="text-primary">2.</b> Right-click the extension
           </h2>
@@ -616,8 +622,8 @@
           <h2 class="text-3xl">
             <b class="text-primary">3.</b> Left-click <i>Manage Extension</i>.
           </h2>
-        </div>
-        <div class={boxClass}>
+        </DownloadCard>
+        <DownloadCard>
           <h2 class="text-3xl">
             <b class="text-primary">4.</b> Enable <i>Developer Mode</i>.
           </h2>
@@ -629,14 +635,15 @@
           <h2 class="text-3xl">
             <b class="text-primary">5.</b> Enable <i>Allow user scripts</i>.
           </h2>
-        </div>
-        <div class={boxClass}>
+        </DownloadCard>
+        <DownloadCard>
           <h2 class="text-3xl">
             <b class="text-primary">6.</b> One-click install
           </h2>
           <p>
             Click this link to Install Blue Marble directly: <a
               class="href"
+              target="_blank"
               href="https://github.com/SwingTheVine/Wplace-BlueMarble/releases/download/v0.76.0/BlueMarble.user.js"
               >Install Blue Marble</a
             >. TamperMonkey will automatically detect the userscript and prompt
@@ -644,15 +651,18 @@
           </p>
           <h2 class="text-3xl">
             <b class="text-primary">7.</b> Refresh the
-            <a href="https://wplace.live/" class="href">wplace.live</a> webpage.
+            <a href="https://wplace.live/" target="_blank" class="href"
+              >wplace.live</a
+            > webpage.
           </h2>
-        </div>
+        </DownloadCard>
       {:else if browser.current === "f"}
-        <div class={boxClass}>
+        <DownloadCard>
           <h2 class="text-3xl">
             <b class="text-primary">1.</b> Install
             <a
               href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/"
+              target="_blank"
               class="href">TamperMonkey for Firefox</a
             >
           </h2>
@@ -662,14 +672,15 @@
             alt=""
             class="w-full mt-2 opacity-50 rounded-box"
           />
-        </div>
-        <div class={boxClass}>
+        </DownloadCard>
+        <DownloadCard>
           <h2 class="text-3xl">
             <b class="text-primary">2.</b> One-click install
           </h2>
           <p>
             Click this link to Install Blue Marble directly: <a
               class="href"
+              target="_blank"
               href="https://github.com/SwingTheVine/Wplace-BlueMarble/releases/download/v0.76.0/BlueMarble.user.js"
               >Install Blue Marble</a
             >. TamperMonkey will automatically detect the userscript and prompt
@@ -677,15 +688,18 @@
           </p>
           <h2 class="text-3xl">
             <b class="text-primary">3.</b> Refresh the
-            <a href="https://wplace.live/" class="href">wplace.live</a> webpage.
+            <a href="https://wplace.live/" target="_blank" class="href"
+              >wplace.live</a
+            > webpage.
           </h2>
-        </div>
+        </DownloadCard>
       {:else}
-        <div class={boxClass}>
+        <DownloadCard>
           <h2 class="text-3xl">
             <b class="text-primary">1.</b> Install
             <a
               href="https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd"
+              target="_blank"
               class="href">TamperMonkey for Microsoft Edge</a
             >
           </h2>
@@ -695,8 +709,8 @@
             alt=""
             class="w-full mt-2 opacity-50 rounded-box"
           />
-        </div>
-        <div class={boxClass}>
+        </DownloadCard>
+        <DownloadCard>
           <h2 class="text-3xl">
             <b class="text-primary">2.</b> Right-click the extension
           </h2>
@@ -708,8 +722,8 @@
           <h2 class="text-3xl">
             <b class="text-primary">3.</b> Left-click <i>Manage Extension</i>.
           </h2>
-        </div>
-        <div class={boxClass}>
+        </DownloadCard>
+        <DownloadCard>
           <h2 class="text-3xl">
             <b class="text-primary">4.</b> Enable <i>Developer Mode</i>.
           </h2>
@@ -718,8 +732,8 @@
             alt=""
             class="w-full mt-2 opacity-50 rounded-box"
           />
-        </div>
-        <div class={boxClass}>
+        </DownloadCard>
+        <DownloadCard>
           <h2 class="text-3xl">
             <b class="text-primary">5.</b> Download the file
             <span class="font-mono bg-base-content/10 rounded-md"
@@ -728,13 +742,14 @@
             in the <i>Assets</i> of the
             <a
               class="href"
+              target="_blank"
               href="https://github.com/SwingTheVine/Wplace-BlueMarble/releases"
               >latest release</a
             >
             .
           </h2>
-        </div>
-        <div class={boxClass}>
+        </DownloadCard>
+        <DownloadCard>
           <h2 class="text-3xl">
             <b class="text-primary">6.</b> Open the TamperMonkey Dashboard.
           </h2>
@@ -743,8 +758,8 @@
             alt=""
             class="h-[60vh] w-min mt-2 opacity-50 rounded-box"
           />
-        </div>
-        <div class={boxClass}>
+        </DownloadCard>
+        <DownloadCard>
           <h2 class="text-3xl">
             <b class="text-primary">7.</b> Drag the
             <span class="font-mono bg-base-content/10 rounded-md"
@@ -757,8 +772,8 @@
             alt=""
             class="w-full mt-2 opacity-50 rounded-box"
           />
-        </div>
-        <div class={boxClass}>
+        </DownloadCard>
+        <DownloadCard>
           <h2 class="text-3xl">
             <b class="text-primary">8.</b> Click the <i>Install</i> button to install
             Blue Marble.
@@ -768,8 +783,8 @@
             alt=""
             class="w-full mt-2 opacity-50 rounded-box"
           />
-        </div>
-        <div class={boxClass}>
+        </DownloadCard>
+        <DownloadCard>
           <h2 class="text-3xl">
             <b class="text-primary">9.</b> Enable Blue Marble inside the TamperMonkey
             dashboard. Blue Marble.
@@ -781,9 +796,11 @@
           />
           <h2 class="text-3xl">
             <b class="text-primary">10.</b> Refresh the
-            <a href="https://wplace.live/" class="href">wplace.live</a> webpage.
+            <a href="https://wplace.live/" target="_blank" class="href"
+              >wplace.live</a
+            > webpage.
           </h2>
-        </div>
+        </DownloadCard>
       {/if}
     </div>
   {/if}
