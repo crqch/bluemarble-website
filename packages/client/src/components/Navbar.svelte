@@ -10,7 +10,7 @@
   );
 
   let scrollProgress = $derived(
-    Math.min(Math.max(scrollY.current - 100) / 100, 1) // clamp at 1 after 200px
+    Math.min(Math.max((scrollY?.current || 0) - 100) / 100, 1) // clamp at 1 after 200px
   );
 </script>
 
@@ -28,7 +28,7 @@
   }}
   class="flex flex-row md:px-20 lg:px-40 px-4 bg-base-100 backdrop-blur-lg sticky left-0 w-full top-0 py-4 justify-between z-50 h-[60px] items-center border-base-content/10"
 >
-  <a class="btn btn-ghost active:scale-[0.98] transition-all" href="/">
+  <a class="btn btn-ghost -ml-4 active:scale-[0.98] transition-all" href="/">
     <img src="bm-highres.webp" class="size-8" alt="" />
     Blue Marble
   </a>
