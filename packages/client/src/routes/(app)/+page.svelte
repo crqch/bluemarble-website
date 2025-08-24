@@ -187,7 +187,7 @@
     </span>
     <img
         src="guide/usage/1.png"
-        class="mt-4 opacity-90 rounded-box"
+        class="mt-4 opacity-90 max-w-[40rem] w-full self-center rounded-box"
         alt="Screenshot showing 4 coordinates mapped from the wplace.live layout to Blue Marble GUI."
     />
     <div class="alert alert-warning items-start gap-2 flex flex-col">
