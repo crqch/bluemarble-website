@@ -45,6 +45,7 @@
     "@polar-sh/sveltekit": "^0.4.3",
     "@tanstack/svelte-form": "^1.14.2",
     "daisyui": "^5.0.46",
+    "motion": "^12.23.12",
     "nuqs-svelte": "^1.2.1",
     "svelte-sonner": "^1.0.5",
     "vite": "^7.0.6",
