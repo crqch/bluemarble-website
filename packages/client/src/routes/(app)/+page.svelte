@@ -106,10 +106,12 @@
         {m.home_goal_showcase()}
         <ArrowDown class="size-4" /></code
     >
-    <img
-        src="showcase.gif"
-        class="rounded-box mt-8 border-2 border-primary/40 ring-8 ring-primary/10"
-        alt="A GIF Video showcasing the usage of Blue Marble - WPlace templating tool"
+    <video
+        src="showcase.mp4"
+        class="rounded-box mt-8 border-2 border-primary/40 ring-8 ring-primary/10 max-w-full"
+        autoplay
+        muted
+        loop
     />
 </section>
 <section id="features" class="flex flex-col md:px-20 lg:px-40 px-4 py-10">
