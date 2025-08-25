@@ -5,15 +5,27 @@
 
     const browser = useQueryState("browser")
 
-    let getClassesForButton = (v: string) => [
-        "hover:scale-[.98] relative before:absolute overflow-hidden before:inset-0 bg-base-100 focus:scale-[.98] active:scale-[.98] group cursor-pointer transition-all p-4 rounded-box border border-base-200 outline-2 flex flex-col gap-2",
-        browser.current === v
+    let getClassesForButton = (b: typeof browser, v: string) => [
+        "hover:scale-[.98] relative before:absolute overflow-hidden before:inset-0 focus:scale-[.98] active:scale-[.98] group cursor-pointer transition-all p-4 rounded-box border border-base-300 outline-2 flex flex-col gap-2",
+        b.current === v
             ? "before:bg-base-content/5 hover:before:bg-base-content/15 focus:before:bg-base-content/15 active:before:bg-base-content/15 scale-[.98] outline-primary"
-            : "hover:before:bg-base-content/5 active:before:bg-base-content/5 focus:before:bg-base-content/5 outline-transparent",
+            : "hover:before:bg-base-content/10 active:before:bg-base-content/10 focus:before:bg-base-content/10 before:bg-base-content/5 outline-transparent",
     ]
 
-    const buttonClick = (value: string) =>
-        browser.current === value ? browser.set(null) : browser.set(value)
+    const buttonClasses = $derived({
+        c: getClassesForButton(browser, "c"),
+        f: getClassesForButton(browser, "f"),
+        e: getClassesForButton(browser, "e"),
+    })
+
+    const buttonClick = (value: string) => {
+        if (browser.current === value) {
+            browser.set(null)
+            browser.current = null
+        } else {
+            browser.set(value)
+        }
+    }
 </script>
 
 <section
@@ -22,14 +34,15 @@
 >
     <code class="text-primary scale-y-[.85]">{m.install_subtitle()}</code>
     <h1 class="text-4xl font-semibold">{m.install_title()}</h1>
-    <div class="flex flex-col md:flex-row gap-8 mt-4">
-        <button
-            onclick={() => buttonClick("c")}
-            class={getClassesForButton("c")}
-        >
+    <div class="relative flex flex-col md:flex-row gap-8 mt-4">
+        <button onclick={() => buttonClick("c")} class={buttonClasses["c"]}>
             <h2 class="text-2xl">{m.install_chromium()}</h2>
             <div
-                class="flex gap-2 opacity-50 group-hover:opacity-80 transition-opacity"
+                class={[
+                    "flex gap-2 transition-opacity",
+                    browser.current !== "c" &&
+                        "opacity-50 group-hover:opacity-80",
+                ]}
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -187,13 +200,14 @@
                 >
             </div>
         </button>
-        <button
-            onclick={() => buttonClick("f")}
-            class={getClassesForButton("f")}
-        >
+        <button onclick={() => buttonClick("f")} class={buttonClasses["f"]}>
             <h2 class="text-2xl">{m.install_firefox()}</h2>
             <div
-                class="flex gap-2 opacity-50 group-hover:opacity-80 transition-opacity"
+                class={[
+                    "flex gap-2 transition-opacity",
+                    browser.current !== "f" &&
+                        "opacity-50 group-hover:opacity-80",
+                ]}
             >
                 <svg
                     viewBox="0 0 256 265"
@@ -494,13 +508,14 @@
                 >
             </div>
         </button>
-        <button
-            onclick={() => buttonClick("e")}
-            class={getClassesForButton("e")}
-        >
+        <button onclick={() => buttonClick("e")} class={buttonClasses["e"]}>
             <h2 class="text-2xl">{m.install_edge()}</h2>
             <div
-                class="flex gap-2 opacity-50 group-hover:opacity-80 transition-opacity"
+                class={[
+                    "flex gap-2 transition-opacity",
+                    browser.current !== "e" &&
+                        "opacity-50 group-hover:opacity-80",
+                ]}
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
