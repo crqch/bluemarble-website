@@ -81,7 +81,7 @@
     "install_chromium_step4": "Enable <i>Developer Mode</i>.",
     "install_chromium_step5": "Enable <i>Allow user scripts</i>.",
     "install_chromium_step6": "One-click install",
-    "install_tampermonkey_direct": "Click this link to Install Blue Marble directly: <a class=\"href\" target=\"_blank\" href=\"https://github.com/SwingTheVine/Wplace-BlueMarble/releases/download/v0.76.0/BlueMarble.user.js\">Install Blue Marble</a>. TamperMonkey will automatically detect the userscript and prompt you to install it.",
+    "install_tampermonkey_direct": "Click this link to Install Blue Marble directly: <a class=\"href\" target=\"_blank\" href=\"https://github.com/SwingTheVine/Wplace-BlueMarble/releases/download/pre/BlueMarble.user.js\">Install Blue Marble</a>. TamperMonkey will automatically detect the userscript and prompt you to install it.",
     "install_step7": "Refresh the <a href=\"https://wplace.live/\" target=\"_blank\" class=\"href\">wplace.live</a> webpage.",
     "install_firefox_step1": "Install <a href=\"https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/\" target=\"_blank\" class=\"href\">TamperMonkey for Firefox</a>",
     "install_edge_step1": "Install <a href=\"https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd\" target=\"_blank\" class=\"href\">TamperMonkey for Microsoft Edge</a>",

@@ -82,7 +82,7 @@
     "install_chromium_step4": "Włącz <i>Tryb programisty</i>.",
     "install_chromium_step5": "Włącz opcję <i>Zezwalaj na skrypty użytkownika</i>.",
     "install_chromium_step6": "Instalacja jednym kliknięciem",
-    "install_tampermonkey_direct": "Kliknij ten link, aby zainstalować Blue Marble bezpośrednio: <a class=\"href\" target=\"_blank\" href=\"https://github.com/SwingTheVine/Wplace-BlueMarble/releases/download/v0.76.0/BlueMarble.user.js\">Zainstaluj Blue Marble</a>. TamperMonkey automatycznie wykryje skrypt użytkownika i poprosi o jego instalację.",
+    "install_tampermonkey_direct": "Kliknij ten link, aby zainstalować Blue Marble bezpośrednio: <a class=\"href\" target=\"_blank\" href=\"https://github.com/SwingTheVine/Wplace-BlueMarble/releases/download/pre/BlueMarble.user.js\">Zainstaluj Blue Marble</a>. TamperMonkey automatycznie wykryje skrypt użytkownika i poprosi o jego instalację.",
     "install_step7": "Odśwież stronę internetową <a href=\"https://wplace.live/\" target=\"_blank\" class=\"href\">wplace.live</a> .",
     "install_firefox_step1": "Zainstaluj <a href=\"https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/\" target=\"_blank\" class=\"href\">TamperMonkey dla przeglądarki Firefox</a>",
     "install_edge_step1": "Zainstaluj <a href=\"https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd\" target=\"_blank\" class=\"href\">TamperMonkey dla Microsoft Edge</a>",
