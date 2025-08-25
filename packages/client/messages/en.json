@@ -97,7 +97,7 @@
     "home_section4_github": "GitHub Discussions",
     "home_goal_subtitle": "ABOUT THE TOOL",
     "home_goal_title": "Why Use Blue Marble?",
-    "home_goal_description": "Blue Marble is a templating tool for <a\n            href=\"https://wplace.live/\"\n            class=\"href\">wplace.live</a\n        >.\n        <br />\n        It shows you where to where to put pixels to create imported image.",
+    "home_goal_description": "Blue Marble is a templating tool for <a href=\"https://wplace.live/\" target=\"_blank\" class=\"href\">wplace.live</a>.<br />It shows you where to where to put pixels to create imported image.",
     "home_goal_showcase": "SEE IT IN ACTION",
     "home_section1_learnmore": "or learn more"
 }
