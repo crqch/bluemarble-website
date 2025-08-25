@@ -2,7 +2,9 @@
     import { goto } from "$app/navigation"
     import { inViewPopIn } from "$lib/motion.svelte"
     import {
+        ArrowDown,
         CheckSquare,
+        ChevronDown,
         Download,
         FolderCode,
         ImageUpscale,
@@ -71,6 +73,16 @@
             {/snippet}
         </Button>
     </div>
+    <a
+        href="#goal"
+        use:inViewPopIn={{
+            delay: 2.3,
+            duration: 0.6,
+        }}
+        class="flex flex-col items-center gap-2 self-center mt-8"
+        >{m.home_section1_learnmore()}
+        <ChevronDown class="w-4 h-4" />
+    </a>
     <div class="absolute inset-0 pointer-events-none">
         <div
             class="w-full h-full bg-[radial-gradient(circle,_rgba(255,255,255,0.4)_1px,_transparent_1px)] [background-size:16px_16px] opacity-20"
@@ -78,6 +90,28 @@
     </div>
 </section>
 <PixelsTransition from="#4180c8" to="var(--color-base-100)" />
+<section
+    id="goal"
+    class="flex flex-col md:px-20 lg:px-40 px-4 py-10 items-center"
+>
+    <code class="text-primary scale-y-[.85]">{m.home_goal_subtitle()}</code>
+    <h1 class="text-4xl font-semibold">{m.home_goal_title()}</h1>
+
+    <p class="text-xl mt-8">
+        {@html m.home_goal_description()}
+    </p>
+
+    <code class="flex items-center gap-2 text-primary scale-y-[.85] mt-8">
+        <ArrowDown class="size-4" />
+        {m.home_goal_showcase()}
+        <ArrowDown class="size-4" /></code
+    >
+    <img
+        src="showcase.gif"
+        class="rounded-box mt-8 border-2 border-primary/40 ring-8 ring-primary/10"
+        alt="A GIF Video showcasing the usage of Blue Marble - WPlace templating tool"
+    />
+</section>
 <section id="features" class="flex flex-col md:px-20 lg:px-40 px-4 py-10">
     <code class="text-primary scale-y-[.85]">{m.home_section2_subtitle()}</code>
     <h1 class="text-4xl font-semibold">{m.home_section2_title()}</h1>

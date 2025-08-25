@@ -12,7 +12,7 @@
     "home_section1_subtitle": "start using Blue Marble for the pixel perfect precision",
     "home_section1_cta": "Install",
     "home_section2_subtitle": "FEATURES",
-    "home_section2_title": "Why Use Blue Marble?",
+    "home_section2_title": "What does Blue Marble offer?",
     "home_section2_item1_title": "Canvas Overlay",
     "home_section2_item1_description": "Blue Marble displays the template directly onto the canvas, no additional lineups are required.",
     "home_section2_item2_title": "Progress Tracking",
@@ -94,5 +94,10 @@
     "install_edge_step8": "Click the <i>Install</i> button to install Blue Marble.",
     "install_edge_step9": "Enable Blue Marble inside the TamperMonkey dashboard.",
     "install_refresh": "Refresh the <a href=\"https://wplace.live/\" target=\"_blank\" class=\"href\">wplace.live</a> webpage.",
-    "home_section4_github": "GitHub Discussions"
+    "home_section4_github": "GitHub Discussions",
+    "home_goal_subtitle": "ABOUT THE TOOL",
+    "home_goal_title": "Why Use Blue Marble?",
+    "home_goal_description": "Blue marble is a templating tool for <a\n            href=\"https://wplace.live/\"\n            class=\"href\">wplace.live</a\n        >.\n        <br />\n        It shows you where to where to put pixels to create imported image.",
+    "home_goal_showcase": "SEE IT IN ACTION",
+    "home_section1_learnmore": "or learn more"
 }

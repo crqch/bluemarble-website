@@ -94,5 +94,10 @@
     "install_edge_step7": "Przeciągnij plik <span class=\"font-mono bg-base-content/10 rounded-md\">BlueMarble.user.js</span> do panelu TamperMonkey.",
     "install_edge_step8": "Kliknij przycisk <i>Instaluj</i>, aby zainstalować Blue Marble.",
     "install_edge_step9": "Włącz Blue Marble w panelu TamperMonkey.",
-    "install_refresh": "Odśwież stronę internetową <a href=\"https://wplace.live/\" target=\"_blank\" class=\"href\">wplace.live</a> ."
+    "install_refresh": "Odśwież stronę internetową <a href=\"https://wplace.live/\" target=\"_blank\" class=\"href\">wplace.live</a> .",
+    "home_section1_learnmore": "lub dowiedz się więcej",
+    "home_goal_subtitle": "O NARZĘDZIU",
+    "home_goal_title": "Dlaczego warto wybrać Blue Marble?",
+    "home_goal_description": "Blue Marble to narzędzie do tworzenia szablonów na stronie <a href=\"https://wplace.live/\" class=\"href\">wplace.live</a>.<br />\nPokazuje, gdzie umieścić piksele, aby utworzyć zaimportowany obraz.",
+    "home_goal_showcase": "ZOBACZ JE W AKCJI"
 }
