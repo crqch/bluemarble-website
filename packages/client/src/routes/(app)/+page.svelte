@@ -112,7 +112,7 @@
         autoplay
         muted
         loop
-    />
+    ></video>
 </section>
 <section id="features" class="flex flex-col md:px-20 lg:px-40 px-4 py-10">
     <code class="text-primary scale-y-[.85]">{m.home_section2_subtitle()}</code>
