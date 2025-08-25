@@ -78,16 +78,6 @@
     </div>
 </section>
 <PixelsTransition from="#4180c8" to="var(--color-base-100)" />
-<!-- <div class="relative">
-    <div
-      class="flex flex-col justify-center items-center text-center
-    h-[80px] overflow-hidden
-    bg-gradient-to-b from-[#4180c8] to-base-100"
-    ></div>
-    <div
-      class="absolute top-10 left-0 z-10 w-full h-[100px] mask-t-from-0 backdrop-blur-xl"
-    ></div>
-  </div> -->
 <section id="features" class="flex flex-col md:px-20 lg:px-40 px-4 py-10">
     <code class="text-primary scale-y-[.85]">{m.home_section2_subtitle()}</code>
     <h1 class="text-4xl font-semibold">{m.home_section2_title()}</h1>
