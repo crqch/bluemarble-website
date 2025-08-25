@@ -27,7 +27,43 @@
         <meta name="keywords" content="Blue Marble, mapping, svelte, open source" />
         <link rel="canonical" href="https://bluemarble.lol/" />
         <meta name="robots" content="index, follow" />
-
+        <!--Open Graph-->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Blue Marble — official" />
+        <meta property="og:description" content="Official Blue Marble project — interactive website and resources." />
+        <meta property="og:url" content="https://bluemarble.lol/" />
+        <meta property="og:site_name" content="Blue Marble" />
+        <meta property="og:image" content="https://bluemarble.lol/og-default.png" />
+        <meta property="og:image:alt" content="Blue Marble — project logo / preview" />
+        <meta property="og:locale" content="en_US" />
+        
+        <!-- X card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@your_twitter_handle" />
+        <meta name="twitter:creator" content="@your_twitter_handle" />
+        <meta name="twitter:title" content="Blue Marble — official" />
+        <meta name="twitter:description" content="Official Blue Marble project — interactive website and resources." />
+        <meta name="twitter:image" content="https://bluemarble.lol/og-default.png" />
+        <meta name="twitter:image:alt" content="Blue Marble — project logo / preview" />
+        
+        <!-- JSON-LD  Organization -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "https://bluemarble.lol/",
+          "name": "Blue Marble",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Blue Marble",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://bluemarble.lol/og-default.png"
+            }
+          },
+          "description": "Official Blue Marble project — interactive website and resources."
+        }
+        </script>
         <!-- <script>
     (function () {
       const saved = localStorage.getItem('theme');
