@@ -27,29 +27,29 @@ Translating can be done in two ways:
 2. Authenticate using GitHub to your account.
 3. Click on Fork button in the bottom.
 
-!['Fork' button](./assets/fork.png)
+!['Fork' button](/docs/assets/fork.png)
 
 4. Check the BCP-47 language tag of the language you want to translate. You can find all language tags on [this website](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry). Tip: You can use Ctrl + F to find for a language, like `French`. For French, the language tag is `fr`
 
-![French language tag](./assets/language_tag.png)
+![French language tag](/docs/assets/language_tag.png)
 
 5. In top left select 'en' language and the language tag (`fr`) you want to translate. If it doesn't exist, create one.
 
-![Languages selection](./assets/language_pick.png)
+![Languages selection](/docs/assets/language_pick.png)
 
 6. You can now either go through all of the translations and fix those that are missing or are wrong, or you can filter them additionally, for example by missing translations.
 
 7. After completing the translation (and also during it to not lose any data), click on the button Push to update your fork.
 
-!['Push' Button](./assets/push_changes.png)
+!['Push' Button](/docs/assets/push_changes.png)
 
 8. Once you're completely finished and are sure there are no mistakes, click on Open pull request
 
-![Open pull request button](./assets/pull_request.png)
+![Open pull request button](/docs/assets/pull_request.png)
 
 9. Describe the details of what your changes bring. Do not remove the last line (`Preview the messages on ...`). After that click on Create pull request
 
-![Create pull request](./assets/create_pull_request.png)
+![Create pull request](/docs/assets/create_pull_request.png)
 
 </details>
 
