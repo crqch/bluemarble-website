@@ -92,16 +92,18 @@
 <PixelsTransition from="#4180c8" to="var(--color-base-100)" />
 <section
     id="goal"
-    class="flex flex-col md:px-20 lg:px-40 px-4 py-10 items-center"
+    class="flex flex-col md:px-20 lg:px-40 px-4 py-10 md:items-center"
 >
     <code class="text-primary scale-y-[.85]">{m.home_goal_subtitle()}</code>
     <h1 class="text-4xl font-semibold">{m.home_goal_title()}</h1>
 
-    <p class="text-xl mt-8">
+    <p class="text-xl mt-8 md:text-center">
         {@html m.home_goal_description()}
     </p>
 
-    <code class="flex items-center gap-2 text-primary scale-y-[.85] mt-8">
+    <code
+        class="flex items-center gap-2 self-center text-primary scale-y-[.85] mt-8"
+    >
         <ArrowDown class="size-4" />
         {m.home_goal_showcase()}
         <ArrowDown class="size-4" /></code
@@ -328,7 +330,7 @@
     <h1 class="text-2xl md:text-4xl text-balance md:text-center">
         {m.home_section6_title()}
     </h1>
-    <p class="text-lg">
+    <p class="text-lg md:text-center">
         {@html m.home_section6_description()}
     </p>
 </section>
