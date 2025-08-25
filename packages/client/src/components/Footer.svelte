@@ -53,6 +53,11 @@
             <a href="#support" class="href-white"
                 >{m.footer_project_community()}</a
             >
+            <a
+                href="https://github.com/SwingTheVine/Wplace-BlueMarble"
+                target="_blank"
+                class="href-white">{m.footer_website_source()}</a
+            >
             <a href="#contributing" class="href-white"
                 >{m.footer_project_contribute()}</a
             >
