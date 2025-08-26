@@ -76,7 +76,7 @@
     "install_firefox": "Firefox based",
     "install_edge": "Microsoft Edge",
     "install_chromium_step1": "Install <a href=\"https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo\" target=\"_blank\" class=\"href\">TamperMonkey for Chrome</a>",
-    "install_chromium_step2": "Right-click the extension",
+    "install_chromium_step2": "Click Manage extension",
     "install_chromium_step3": "Left-click <i>Manage Extension</i>.",
     "install_chromium_step4": "Enable <i>Developer Mode</i>.",
     "install_chromium_step5": "Enable <i>Allow user scripts</i>.",
@@ -99,5 +99,11 @@
     "home_goal_title": "Why Use Blue Marble?",
     "home_goal_description": "Blue Marble is a templating tool for <a href=\"https://wplace.live/\" target=\"_blank\" class=\"href\">wplace.live</a>.<br /><br />It shows you where to where to put pixels to create imported image.",
     "home_goal_showcase": "SEE IT IN ACTION",
-    "home_section1_learnmore": "or learn more"
+    "home_section1_learnmore": "or learn more",
+    "install_video_tampermonkey_warning": "If you see this blue warning, restart your browser.",
+    "install_video_oneclick": "<a class=\"href\" target=\"_blank\" href=\"https://github.com/SwingTheVine/Wplace-BlueMarble/releases/download/pre/BlueMarble.user.js\">Click here to one-click install.</a>",
+    "install_video_visitwplace": "Go to <a href=\"https://wplace.live/\" target=\"_blank\" class=\"href\">wplace.live</a>, the script should now be working.",
+    "install_followinteractivevideo": "Follow our interactive video guide to install Blue Marble",
+    "install_legacyguide": "or click here to view the legacy guide",
+    "install_legacyguidehide": "hide legacy guide"
 }

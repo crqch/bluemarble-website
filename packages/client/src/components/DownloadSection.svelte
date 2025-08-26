@@ -2,8 +2,10 @@
     import { useQueryState } from "nuqs-svelte"
     import { m } from "../paraglide/messages"
     import DownloadCard from "./DownloadCard.svelte"
+    import InteractiveGuide from "./InteractiveGuide.svelte"
 
     const browser = useQueryState("browser")
+    let legacyGuide = $state(false)
 
     let getClassesForButton = (b: typeof browser, v: string) => [
         "hover:scale-[.98] relative before:absolute overflow-hidden before:inset-0 focus:scale-[.98] active:scale-[.98] group cursor-pointer transition-all p-4 rounded-box border border-base-300 outline-2 flex flex-col gap-2",
@@ -637,181 +639,201 @@
 
     {#if browser.current !== null}
         <div class="flex flex-col items-center gap-4 mt-6">
+            <h2 class="text-2xl md:text-4xl my-4">
+                {m.install_followinteractivevideo()}
+            </h2>
             {#if browser.current === "c"}
-                <DownloadCard>
-                    <h2 class="text-3xl">
-                        <b class="text-primary">1.</b>
-                        {@html m.install_chromium_step1()}
-                    </h2>
-
-                    <img
-                        src="guide/chromium/1.png"
-                        alt=""
-                        class="w-full mt-2 opacity-50 rounded-box"
-                    />
-                </DownloadCard>
-                <DownloadCard>
-                    <h2 class="text-3xl">
-                        <b class="text-primary">2.</b>
-                        {m.install_chromium_step2()}
-                    </h2>
-                    <img
-                        src="guide/chromium/2.png"
-                        alt=""
-                        class="h-[60vh] w-min mt-2 opacity-50 rounded-box"
-                    />
-                    <h2 class="text-3xl">
-                        <b class="text-primary">3.</b>
-                        {@html m.install_chromium_step3()}
-                    </h2>
-                </DownloadCard>
-                <DownloadCard>
-                    <h2 class="text-3xl">
-                        <b class="text-primary">4.</b>
-                        {@html m.install_chromium_step4()}
-                    </h2>
-                    <img
-                        src="guide/chromium/4.png"
-                        alt=""
-                        class="max-h-screen mt-2 opacity-50 rounded-box"
-                    />
-                    <h2 class="text-3xl">
-                        <b class="text-primary">5.</b>
-                        {@html m.install_chromium_step5()}
-                    </h2>
-                </DownloadCard>
-                <DownloadCard>
-                    <h2 class="text-3xl">
-                        <b class="text-primary">6.</b>
-                        {m.install_chromium_step6()}
-                    </h2>
-                    <p>
-                        {@html m.install_tampermonkey_direct()}
-                    </p>
-                    <h2 class="text-3xl">
-                        <b class="text-primary">7.</b>
-                        {@html m.install_refresh()}
-                    </h2>
-                </DownloadCard>
+                <InteractiveGuide browser="chromium" />
             {:else if browser.current === "f"}
-                <DownloadCard>
-                    <h2 class="text-3xl">
-                        <b class="text-primary">1.</b>
-                        {@html m.install_firefox_step1()}
-                    </h2>
+                <InteractiveGuide browser="firefox" />
+            {:else if browser.current === "e"}
+                <InteractiveGuide browser="edge" />
+            {/if}
+            <button
+                class="btn btn-link"
+                onclick={() => (legacyGuide = !legacyGuide)}
+            >
+                {legacyGuide
+                    ? m.install_legacyguidehide()
+                    : m.install_legacyguide()}
+            </button>
+            {#if legacyGuide}
+                {#if browser.current === "c"}
+                    <DownloadCard>
+                        <h2 class="text-3xl">
+                            <b class="text-primary">1.</b>
+                            {@html m.install_chromium_step1()}
+                        </h2>
 
-                    <img
-                        src="guide/firefox/1.png"
-                        alt=""
-                        class="w-full mt-2 opacity-50 rounded-box"
-                    />
-                </DownloadCard>
-                <DownloadCard>
-                    <h2 class="text-3xl">
-                        <b class="text-primary">2.</b>
-                        {m.install_chromium_step6()}
-                    </h2>
-                    <p>
-                        {@html m.install_tampermonkey_direct()}
-                    </p>
-                    <h2 class="text-3xl">
-                        <b class="text-primary">3.</b>
-                        {@html m.install_refresh()}
-                    </h2>
-                </DownloadCard>
-            {:else}
-                <DownloadCard>
-                    <h2 class="text-3xl">
-                        <b class="text-primary">1.</b>
-                        {@html m.install_edge_step1()}
-                    </h2>
+                        <img
+                            src="guide/chromium/1.png"
+                            alt=""
+                            class="w-full mt-2 opacity-50 rounded-box"
+                        />
+                    </DownloadCard>
+                    <DownloadCard>
+                        <h2 class="text-3xl">
+                            <b class="text-primary">2.</b>
+                            {m.install_chromium_step2()}
+                        </h2>
+                        <img
+                            src="guide/chromium/2.png"
+                            alt=""
+                            class="h-[60vh] w-min mt-2 opacity-50 rounded-box"
+                        />
+                        <h2 class="text-3xl">
+                            <b class="text-primary">3.</b>
+                            {@html m.install_chromium_step3()}
+                        </h2>
+                    </DownloadCard>
+                    <DownloadCard>
+                        <h2 class="text-3xl">
+                            <b class="text-primary">4.</b>
+                            {@html m.install_chromium_step4()}
+                        </h2>
+                        <img
+                            src="guide/chromium/4.png"
+                            alt=""
+                            class="max-h-screen mt-2 opacity-50 rounded-box"
+                        />
+                        <h2 class="text-3xl">
+                            <b class="text-primary">5.</b>
+                            {@html m.install_chromium_step5()}
+                        </h2>
+                    </DownloadCard>
+                    <DownloadCard>
+                        <h2 class="text-3xl">
+                            <b class="text-primary">6.</b>
+                            {m.install_chromium_step6()}
+                        </h2>
+                        <p>
+                            {@html m.install_tampermonkey_direct()}
+                        </p>
+                        <h2 class="text-3xl">
+                            <b class="text-primary">7.</b>
+                            {@html m.install_refresh()}
+                        </h2>
+                    </DownloadCard>
+                {:else if browser.current === "f"}
+                    <DownloadCard>
+                        <h2 class="text-3xl">
+                            <b class="text-primary">1.</b>
+                            {@html m.install_firefox_step1()}
+                        </h2>
 
-                    <img
-                        src="guide/edge/1.png"
-                        alt=""
-                        class="w-full mt-2 opacity-50 rounded-box"
-                    />
-                </DownloadCard>
-                <DownloadCard>
-                    <h2 class="text-3xl">
-                        <b class="text-primary">2.</b>
-                        {m.install_edge_step2()}
-                    </h2>
-                    <img
-                        src="guide/edge/2.png"
-                        alt=""
-                        class="h-[60vh] w-min mt-2 opacity-50 rounded-box"
-                    />
-                    <h2 class="text-3xl">
-                        <b class="text-primary">3.</b>
-                        {@html m.install_edge_step3()}
-                    </h2>
-                </DownloadCard>
-                <DownloadCard>
-                    <h2 class="text-3xl">
-                        <b class="text-primary">4.</b>
-                        {@html m.install_edge_step4()}
-                    </h2>
-                    <img
-                        src="guide/edge/4.png"
-                        alt=""
-                        class="w-full mt-2 opacity-50 rounded-box"
-                    />
-                </DownloadCard>
-                <DownloadCard>
-                    <h2 class="text-3xl">
-                        <b class="text-primary">5.</b>
-                        {@html m.install_edge_step5()}
-                    </h2>
-                </DownloadCard>
-                <DownloadCard>
-                    <h2 class="text-3xl">
-                        <b class="text-primary">6.</b>
-                        {m.install_edge_step6()}
-                    </h2>
-                    <img
-                        src="guide/edge/6.png"
-                        alt=""
-                        class="h-[60vh] w-min mt-2 opacity-50 rounded-box"
-                    />
-                </DownloadCard>
-                <DownloadCard>
-                    <h2 class="text-3xl">
-                        <b class="text-primary">7.</b>
-                        {@html m.install_edge_step7()}
-                    </h2>
-                    <img
-                        src="guide/edge/7.png"
-                        alt=""
-                        class="w-full mt-2 opacity-50 rounded-box"
-                    />
-                </DownloadCard>
-                <DownloadCard>
-                    <h2 class="text-3xl">
-                        <b class="text-primary">8.</b>
-                        {@html m.install_edge_step8()}
-                    </h2>
-                    <img
-                        src="guide/edge/8.png"
-                        alt=""
-                        class="w-full mt-2 opacity-50 rounded-box"
-                    />
-                </DownloadCard>
-                <DownloadCard>
-                    <h2 class="text-3xl">
-                        <b class="text-primary">9.</b>
-                        {m.install_edge_step9()}
-                    </h2>
-                    <img
-                        src="guide/edge/9.png"
-                        alt=""
-                        class="w-full mt-2 opacity-50 rounded-box"
-                    />
-                    <h2 class="text-3xl">
-                        <b class="text-primary">10.</b>
-                        {@html m.install_refresh()}
-                    </h2>
-                </DownloadCard>
+                        <img
+                            src="guide/firefox/1.png"
+                            alt=""
+                            class="w-full mt-2 opacity-50 rounded-box"
+                        />
+                    </DownloadCard>
+                    <DownloadCard>
+                        <h2 class="text-3xl">
+                            <b class="text-primary">2.</b>
+                            {m.install_chromium_step6()}
+                        </h2>
+                        <p>
+                            {@html m.install_tampermonkey_direct()}
+                        </p>
+                        <h2 class="text-3xl">
+                            <b class="text-primary">3.</b>
+                            {@html m.install_refresh()}
+                        </h2>
+                    </DownloadCard>
+                {:else}
+                    <DownloadCard>
+                        <h2 class="text-3xl">
+                            <b class="text-primary">1.</b>
+                            {@html m.install_edge_step1()}
+                        </h2>
+
+                        <img
+                            src="guide/edge/1.png"
+                            alt=""
+                            class="w-full mt-2 opacity-50 rounded-box"
+                        />
+                    </DownloadCard>
+                    <DownloadCard>
+                        <h2 class="text-3xl">
+                            <b class="text-primary">2.</b>
+                            {m.install_edge_step2()}
+                        </h2>
+                        <img
+                            src="guide/edge/2.png"
+                            alt=""
+                            class="h-[60vh] w-min mt-2 opacity-50 rounded-box"
+                        />
+                        <h2 class="text-3xl">
+                            <b class="text-primary">3.</b>
+                            {@html m.install_edge_step3()}
+                        </h2>
+                    </DownloadCard>
+                    <DownloadCard>
+                        <h2 class="text-3xl">
+                            <b class="text-primary">4.</b>
+                            {@html m.install_edge_step4()}
+                        </h2>
+                        <img
+                            src="guide/edge/4.png"
+                            alt=""
+                            class="w-full mt-2 opacity-50 rounded-box"
+                        />
+                    </DownloadCard>
+                    <DownloadCard>
+                        <h2 class="text-3xl">
+                            <b class="text-primary">5.</b>
+                            {@html m.install_edge_step5()}
+                        </h2>
+                    </DownloadCard>
+                    <DownloadCard>
+                        <h2 class="text-3xl">
+                            <b class="text-primary">6.</b>
+                            {m.install_edge_step6()}
+                        </h2>
+                        <img
+                            src="guide/edge/6.png"
+                            alt=""
+                            class="h-[60vh] w-min mt-2 opacity-50 rounded-box"
+                        />
+                    </DownloadCard>
+                    <DownloadCard>
+                        <h2 class="text-3xl">
+                            <b class="text-primary">7.</b>
+                            {@html m.install_edge_step7()}
+                        </h2>
+                        <img
+                            src="guide/edge/7.png"
+                            alt=""
+                            class="w-full mt-2 opacity-50 rounded-box"
+                        />
+                    </DownloadCard>
+                    <DownloadCard>
+                        <h2 class="text-3xl">
+                            <b class="text-primary">8.</b>
+                            {@html m.install_edge_step8()}
+                        </h2>
+                        <img
+                            src="guide/edge/8.png"
+                            alt=""
+                            class="w-full mt-2 opacity-50 rounded-box"
+                        />
+                    </DownloadCard>
+                    <DownloadCard>
+                        <h2 class="text-3xl">
+                            <b class="text-primary">9.</b>
+                            {m.install_edge_step9()}
+                        </h2>
+                        <img
+                            src="guide/edge/9.png"
+                            alt=""
+                            class="w-full mt-2 opacity-50 rounded-box"
+                        />
+                        <h2 class="text-3xl">
+                            <b class="text-primary">10.</b>
+                            {@html m.install_refresh()}
+                        </h2>
+                    </DownloadCard>
+                {/if}
             {/if}
         </div>
     {/if}

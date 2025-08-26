@@ -77,7 +77,7 @@
     "install_firefox": "Oparta na Firefoksie",
     "install_edge": "Microsoft Edge",
     "install_chromium_step1": "Zainstaluj <a href=\"https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo\" target=\"_blank\" class=\"href\">TamperMonkey dla Chrome</a>",
-    "install_chromium_step2": "Kliknij prawym przyciskiem myszy na rozszerzenie",
+    "install_chromium_step2": "Kliknij Zarządzaj rozszerzeniem",
     "install_chromium_step3": "Kliknij lewym przyciskiem myszy opcję <i>Zarządzaj rozszerzeniem</i>.",
     "install_chromium_step4": "Włącz <i>Tryb programisty</i>.",
     "install_chromium_step5": "Włącz opcję <i>Zezwalaj na skrypty użytkownika</i>.",
