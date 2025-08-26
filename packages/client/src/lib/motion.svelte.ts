@@ -14,24 +14,23 @@ export const inViewPopIn: Action<
         delay?: number
     }
 ) => {
-    $effect(() => {
-        node.style.opacity = "0"
-        node.style.filter = "blur(5px)"
-        node.style.transform = "translateY(20px)"
-        console.log(config)
-        inView(
-            node,
-            (element) => {
-                animate(
-                    element,
-                    { opacity: 1, filter: "blur(0px)", y: 0 },
-                    { duration: config?.duration, delay: config?.delay }
-                )
-            },
-            {
-                margin:
-                    node.getBoundingClientRect().top < 200 ? "0px" : "-200px",
-            }
-        )
-    })
-}
+        $effect(() => {
+            node.style.opacity = "0"
+            node.style.filter = "blur(5px)"
+            node.style.transform = "translateY(20px)"
+            inView(
+                node,
+                (element) => {
+                    animate(
+                        element,
+                        { opacity: 1, filter: "blur(0px)", y: 0 },
+                        { duration: config?.duration, delay: config?.delay }
+                    )
+                },
+                {
+                    margin:
+                        node.getBoundingClientRect().top < 200 ? "0px" : "-200px",
+                }
+            )
+        })
+    }
