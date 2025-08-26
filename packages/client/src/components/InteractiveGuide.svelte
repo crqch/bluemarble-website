@@ -126,6 +126,7 @@
         ...guide.steps[0],
         index: 0,
     })
+let jumped = $state(false)
     let abortChecking = $state(false)
     let initialPause = $state(true)
 
@@ -154,13 +155,16 @@
 
     const next = () => {
         if (initialPause) initialPause = false
+if (!jumped) {
         currentStep = {
             ...guide.steps[currentStep.index + 1],
             index: currentStep.index + 1,
+}
         }
         videoRef.play()
         paused = false
         abortChecking = false
+jumped = false
     }
 
     const skip = () => {
@@ -170,6 +174,7 @@
             ...nextStep,
             index: currentStep.index + 1,
         }
+jumped = true
     }
 
     const previous = () => {
@@ -179,6 +184,7 @@
             ...previousStep,
             index: currentStep.index - 1,
         }
+jumped = true
     }
 
     const repeat = () => {
