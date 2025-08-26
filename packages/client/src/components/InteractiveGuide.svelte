@@ -23,7 +23,8 @@
         edge: Guide
     } = {
         chromium: {
-            videoSrc: "guide/chrome-tutorial.mp4",
+            videoSrc:
+                "https://5z7ci365vn.ufs.sh/f/88jSHGM4wtrPwvDCi6YIBK0FifALjkcSClygq4u7X9p5ObUe",
             steps: [
                 {
                     time: 3.06,
@@ -56,7 +57,8 @@
             ],
         },
         firefox: {
-            videoSrc: "guide/firefox-tutorial.mp4",
+            videoSrc:
+                "https://5z7ci365vn.ufs.sh/f/88jSHGM4wtrPckCYfQv6eHtVT82RpED1M0SrbPCzZ7cYvflI",
             steps: [
                 {
                     time: 0.2,
@@ -73,7 +75,7 @@
             ],
         },
         edge: {
-            videoSrc: "guide/edge-tutorial.mp4",
+            videoSrc: "",
             steps: [
                 {
                     time: 0.2,
