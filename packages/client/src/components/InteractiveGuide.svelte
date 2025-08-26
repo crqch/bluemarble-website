@@ -75,11 +75,33 @@
             ],
         },
         edge: {
-            videoSrc: "",
+            videoSrc:
+                "https://5z7ci365vn.ufs.sh/f/88jSHGM4wtrPfYnc80xQFabEyWTNnMVhzrjCu0x1HeOIoJPf",
             steps: [
                 {
                     time: 0.2,
-                    caption: "Guide is Work In Progress",
+                    caption: m.install_edge_step1(),
+                },
+                {
+                    time: 8.6,
+                    caption: m.install_chromium_step2(),
+                },
+                {
+                    time: 14,
+                    caption: m.install_chromium_step4(),
+                },
+                {
+                    time: 18.7,
+                    caption:
+                        "If you see a blue warning here, restart your browser.",
+                },
+                {
+                    time: 26.6,
+                    caption: m.install_video_oneclick(),
+                },
+                {
+                    time: 36.5,
+                    caption: m.install_video_visitwplace(),
                 },
             ],
         },
