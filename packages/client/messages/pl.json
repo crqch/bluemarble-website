@@ -105,5 +105,9 @@
 	"install_video_visitwplace": "Przejdź do <a href=\"https://wplace.live/\" target=\"_blank\" class=\"href\">wplace.live</a>, skrypt powinien teraz działać.",
 	"install_followinteractivevideo": "Skorzystaj z naszego interaktywnego przewodnika wideo, aby zainstalować Blue Marble",
 	"install_legacyguide": "lub kliknij tutaj, aby zobaczyć poprzednią wersję przewodnika",
-	"install_legacyguidehide": "ukryj poprzedni przewodnik"
+	"install_legacyguidehide": "ukryj poprzedni przewodnik",
+	"install_video_watchagain": "Odtwórz ponownie",
+	"install_video_back": "Wróć do kroku",
+	"install_video_skip": "Pomiń krok",
+	"install_video_tampermonkey_warning_suggestion": "Jeśli widzisz tutaj niebieskie ostrzeżenie, zrestartuj przeglądarkę."
 }
