@@ -129,6 +129,15 @@
     let abortChecking = $state(false)
     let initialPause = $state(true)
 
+    const play = async () => {
+        if (!videoRef) return
+        if (videoRef.play.prototype instanceof Promise) {
+            await videoRef.play()
+        } else {
+            videoRef.play()
+        }
+    }
+
     onMount(() => {
         if (!videoRef) return
         const onProgress = (e: Event) => {
@@ -152,7 +161,7 @@
         return () => videoRef.removeEventListener("timeupdate", onProgress)
     })
 
-    const next = () => {
+    const next = async () => {
         if (initialPause) initialPause = false
         if (!jumped) {
             currentStep = {
@@ -160,7 +169,7 @@
                 index: currentStep.index + 1,
             }
         }
-        videoRef.play()
+        await videoRef.play()
         paused = false
         abortChecking = false
         jumped = false
@@ -186,9 +195,10 @@
         jumped = true
     }
 
-    const repeat = () => {
+    const repeat = async () => {
         videoRef.currentTime = currentStep.time
-        videoRef.play()
+        abortChecking = true
+        await videoRef.play()
         setTimeout(() => {
             paused = false
             abortChecking = false
