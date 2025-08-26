@@ -91,6 +91,7 @@
         browser: "chromium" | "firefox" | "edge"
     } = $props()
 
+    let loading = $state(true)
     let guide = $derived(guidesData[browser])
     let videoRef: HTMLVideoElement
     let time = $state(0)
@@ -201,13 +202,14 @@
 </script>
 
 <div
-    class="relative flex flex-col rounded-box overflow-hidden border-2 border-primary/40 ring-8 ring-primary/10"
+    class="relative flex flex-col rounded-box w-full overflow-hidden border-2 border-primary/40 ring-8 ring-primary/10"
 >
     {#if initialPause}
         <div
             tabindex="0"
             onkeydown={() => {}}
             onclick={() => {
+if (loading) return
                 videoRef.play()
                 setTimeout(() => {
                     initialPause = false
@@ -221,11 +223,14 @@
             <div
                 class="absolute flex flex-col items-center justify-center inset-0 gap-4"
             >
+{#if loading}
+                    <span class="loading loading-spinner size-14"></span>{:else}
                 <button
                     class=" cursor-pointer group-hover:scale-[.98] transition-all z-10 group-hover:border-primary border-2 border-base-300 bg-base-100/90 rounded-full size-20 flex items-center justify-center"
                 >
                     <Play class="size-8 text-primary" />
                 </button>
+{/if}
             </div>
         </div>
     {:else}
@@ -305,5 +310,11 @@
             {/if}
         </div>
     {/if}
-    <video src={guide.videoSrc} muted loop bind:this={videoRef}></video>
+    <video
+        onloadeddata={() => (loading = false)}
+src={guide.videoSrc}
+muted
+loop
+bind:this={videoRef}
+></video>
 </div>
