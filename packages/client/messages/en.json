@@ -105,5 +105,9 @@
 	"install_video_visitwplace": "Go to <a href=\"https://wplace.live/\" target=\"_blank\" class=\"href\">wplace.live</a>, the script should now be working.",
 	"install_followinteractivevideo": "Follow our interactive video guide to install Blue Marble",
 	"install_legacyguide": "or click here to view the legacy guide",
-	"install_legacyguidehide": "hide legacy guide"
+	"install_legacyguidehide": "hide legacy guide",
+	"install_video_watchagain": "Watch again",
+	"install_video_back": "Back to step",
+	"install_video_skip": "Skip over step",
+	"install_video_tampermonkey_warning_suggestion": "If you see a blue warning here, restart your browser."
 }

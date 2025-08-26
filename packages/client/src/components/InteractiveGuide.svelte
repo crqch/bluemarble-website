@@ -92,8 +92,7 @@
                 },
                 {
                     time: 18.7,
-                    caption:
-                        "If you see a blue warning here, restart your browser.",
+                    caption: m.install_video_tampermonkey_warning_suggestion(),
                 },
                 {
                     time: 26.6,
@@ -126,7 +125,7 @@
         ...guide.steps[0],
         index: 0,
     })
-let jumped = $state(false)
+    let jumped = $state(false)
     let abortChecking = $state(false)
     let initialPause = $state(true)
 
@@ -155,16 +154,16 @@ let jumped = $state(false)
 
     const next = () => {
         if (initialPause) initialPause = false
-if (!jumped) {
-        currentStep = {
-            ...guide.steps[currentStep.index + 1],
-            index: currentStep.index + 1,
-}
+        if (!jumped) {
+            currentStep = {
+                ...guide.steps[currentStep.index + 1],
+                index: currentStep.index + 1,
+            }
         }
         videoRef.play()
         paused = false
         abortChecking = false
-jumped = false
+        jumped = false
     }
 
     const skip = () => {
@@ -174,7 +173,7 @@ jumped = false
             ...nextStep,
             index: currentStep.index + 1,
         }
-jumped = true
+        jumped = true
     }
 
     const previous = () => {
@@ -184,7 +183,7 @@ jumped = true
             ...previousStep,
             index: currentStep.index - 1,
         }
-jumped = true
+        jumped = true
     }
 
     const repeat = () => {
@@ -237,7 +236,7 @@ jumped = true
             tabindex="0"
             onkeydown={() => {}}
             onclick={() => {
-if (loading) return
+                if (loading) return
                 videoRef.play()
                 setTimeout(() => {
                     initialPause = false
@@ -251,14 +250,14 @@ if (loading) return
             <div
                 class="absolute flex flex-col items-center justify-center inset-0 gap-4"
             >
-{#if loading}
+                {#if loading}
                     <span class="loading loading-spinner size-14"></span>{:else}
-                <button
-                    class=" cursor-pointer group-hover:scale-[.98] transition-all z-10 group-hover:border-primary border-2 border-base-300 bg-base-100/90 rounded-full size-20 flex items-center justify-center"
-                >
-                    <Play class="size-8 text-primary" />
-                </button>
-{/if}
+                    <button
+                        class=" cursor-pointer group-hover:scale-[.98] transition-all z-10 group-hover:border-primary border-2 border-base-300 bg-base-100/90 rounded-full size-20 flex items-center justify-center"
+                    >
+                        <Play class="size-8 text-primary" />
+                    </button>
+                {/if}
             </div>
         </div>
     {:else}
@@ -297,7 +296,7 @@ if (loading) return
                 onclick={repeat}
                 class="cursor-pointer pointer-events-auto transition-all z-10 hover:border-primary border-2 border-base-300 bg-base-100/90 rounded-box flex items-center justify-center p-px px-1 md:p-2 md:px-2 gap-2"
             >
-                <p class="text-sm">Watch again</p>
+                <p class="text-sm">{m.install_video_watchagain()}</p>
                 <Repeat class="size-3 text-primary" />
             </button>
             <div
@@ -309,7 +308,8 @@ if (loading) return
                         class="flex cursor-pointer bg-base-100 border-2 text-sm p-px px-2 items-center border-base-300 hover:border-primary transition-colors join-item gap-2 text-base-content"
                     >
                         <ChevronLeft class="size-3" />
-                        Back to step {currentStep.index}
+                        {m.install_video_back()}
+                        {currentStep.index}
                     </button>
                 {/if}
                 {#if currentStep.index !== guide.steps.length - 1}
@@ -317,7 +317,8 @@ if (loading) return
                         onclick={skip}
                         class="flex cursor-pointer bg-base-100 border-2 text-sm p-px px-2 items-center border-base-300 hover:border-primary transition-colors join-item gap-2 text-base-content"
                     >
-                        Skip to step {currentStep.index + 3}
+                        {m.install_video_skip()}
+                        {currentStep.index + 2}
                         <ChevronRight class="size-3" />
                     </button>
                 {/if}
@@ -340,9 +341,9 @@ if (loading) return
     {/if}
     <video
         onloadeddata={() => (loading = false)}
-src={guide.videoSrc}
-muted
-loop
-bind:this={videoRef}
-></video>
+        src={guide.videoSrc}
+        muted
+        loop
+        bind:this={videoRef}
+    ></video>
 </div>
