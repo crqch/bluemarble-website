@@ -103,5 +103,11 @@
 	"install_video_tampermonkey_warning": "Если вы видите это синее предупреждение, перезапустите браузер.",
 	"install_video_oneclick": "<a class=\"href\" target=\"_blank\" href=\"https://github.com/SwingTheVine/Wplace-BlueMarble/releases/download/pre/BlueMarble.user.js\">Нажмите здесь, чтобы установить в один клик.</a>",
 	"install_video_visitwplace": "Перейдите на <a href=\"https://wplace.live/\" target=\"_blank\" class=\"href\">wplace.live</a>, теперь скрипт должен работать.",
-	"install_followinteractivevideo": "Следуйте нашему интерактивному видеоруководству по установке Blue Marble"
+	"install_followinteractivevideo": "Следуйте нашему интерактивному видеоруководству по установке Blue Marble",
+	"install_legacyguide": "или нажмите здесь, чтобы просмотреть старую версию руководства",
+	"install_legacyguidehide": "скрыть старую версию руководства",
+	"install_video_watchagain": "Посмотреть ещё раз",
+	"install_video_back": "Вернуться к шагу",
+	"install_video_skip": "Пропустить шаг",
+	"install_video_tampermonkey_warning_suggestion": "Если вы видите здесь синее предупреждение, перезапустите браузер."
 }
