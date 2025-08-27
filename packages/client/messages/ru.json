@@ -90,5 +90,18 @@
 	"install_edge_step4": "Включите <i>Режим разработчика</i>.",
 	"install_edge_step5": "Скачайте файл <span class=\"font-mono bg-base-content/10 rounded-md\">BlueMarble.user.js</span> в разделе <i>Ресурсы</i> <a class=\"href\" target=\"_blank\" href=\"https://github.com/SwingTheVine/Wplace-BlueMarble/releases\">последней версии</a>.",
 	"install_edge_step6": "Откройте панель управления TamperMonkey.",
-	"install_edge_step7": "Перетащите файл <span class=\"font-mono bg-base-content/10 rounded-md\">BlueMarble.user.js</span> на панель управления TamperMonkey."
+	"install_edge_step7": "Перетащите файл <span class=\"font-mono bg-base-content/10 rounded-md\">BlueMarble.user.js</span> на панель управления TamperMonkey.",
+	"install_edge_step8": "Нажмите кнопку <i>Установить</i>, чтобы установить Blue Marble.",
+	"install_edge_step9": "Включите Blue Marble на панели управления TamperMonkey.",
+	"install_refresh": "Обновите веб-страницу <a href=\"https://wplace.live/\" target=\"_blank\" class=\"href\">wplace.live</a>.",
+	"home_section4_github": "Обсуждения на GitHub",
+	"home_goal_subtitle": "ОБ ИНСТРУМЕНТЕ",
+	"home_goal_title": "Зачем использовать Blue Marble?",
+	"home_goal_description": "Blue Marble - это инструмент создания шаблонов для <a href=\"https://wplace.live/\" target=\"_blank\" class=\"href\">wplace.live</a>.<br /><br /> Он показывает, куда поместить пиксели для создания импортированного изображения.",
+	"home_goal_showcase": "УВИДЬТЕ ЭТО В ДЕЙСТВИИ",
+	"home_section1_learnmore": "или узнайте больше",
+	"install_video_tampermonkey_warning": "Если вы видите это синее предупреждение, перезапустите браузер.",
+	"install_video_oneclick": "<a class=\"href\" target=\"_blank\" href=\"https://github.com/SwingTheVine/Wplace-BlueMarble/releases/download/pre/BlueMarble.user.js\">Нажмите здесь, чтобы установить в один клик.</a>",
+	"install_video_visitwplace": "Перейдите на <a href=\"https://wplace.live/\" target=\"_blank\" class=\"href\">wplace.live</a>, теперь скрипт должен работать.",
+	"install_followinteractivevideo": "Следуйте нашему интерактивному видеоруководству по установке Blue Marble"
 }
