@@ -13,5 +13,10 @@
 	"home_section1_cta": "Установить",
 	"home_section2_subtitle": "ФУНКЦИИ",
 	"home_section2_title": "Что предлагает Blue Marble?",
-	"home_section2_item1_title": "Наложение холста"
+	"home_section2_item1_title": "Наложение холста",
+	"home_section2_item1_description": "Blue Marble отображает шаблон прямо на холсте, никаких дополнительных настроек не требуется.",
+	"home_section2_item2_title": "Отслеживание прогресса",
+	"home_section2_item2_description": "Отслеживание количества правильно и неправильно размещенных пикселей в реальном времени.",
+	"home_section2_item3_title": "С открытым исходным кодом",
+	"home_section2_item3_description": "Вся кодовая база Blue Marble <span class=\"opacity-50\">(даже этого веб-сайта!)</span> имеет открытый исходный код и доступна для внесения любым желающим.<br /><br /> Это обеспечивает безопасность и высокую производительность."
 }
