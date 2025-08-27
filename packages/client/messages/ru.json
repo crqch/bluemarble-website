@@ -31,5 +31,17 @@
 	"home_section3_image_transparent1": "Для <u>явно</u> прозрачных пикселей необходимо использовать",
 	"home_section3_image_transparent2": "Цвет HEX.",
 	"home_section3_step2": "Загрузите изображение в формате PNG или WEBP.",
-	"home_section3_step3": "Нажмите кнопку <i>Create</i>."
+	"home_section3_step3": "Нажмите кнопку <i>Create</i>.",
+	"home_section3_step4": "Если ваш шаблон по-прежнему не отображается, попробуйте нажать кнопку <i>Enable</i>.",
+	"home_section4_subtitle": "ПОДДЕРЖИВАТЬ",
+	"home_section4_title": "Если у вас возникнут какие-либо проблемы, обращайтесь!",
+	"home_section4_members": "3000+ УЧАСТНИКОВ",
+	"home_section5_subtitle": "БЕЗОПАСНОСТЬ",
+	"home_section5_title": "Сообщение об уязвимости безопасности",
+	"home_section5_description": "Поскольку это пользовательский скрипт, уязвимостей будет немного. Пользователь сам отвечает за свою безопасность, выбирая, какие скрипты запускать. В любом случае, если вы обнаружите уязвимость в Blue Marble, пожалуйста, сообщите об этом на вкладке <a href=\"https://github.com/SwingTheVine/Wplace-BlueMarble/security/advisories/new\" class=\"href\" target=\"_blank\">Сообщить об уязвимости</a> в GitHub Security Advisory.",
+	"home_section6_subtitle": "ВКЛАД",
+	"home_section6_title": "Blue Marble - это проект, инициированный сообществом.",
+	"home_section6_description": " Мы рады видеть ваш вклад в наш проект.<br /> Дополнительную информацию о совместной работе можно найти в нашей <a href=\"https://github.com/SwingTheVine/Wplace-BlueMarble/blob/main/docs/CONTRIBUTING.md\" target=\"_blank\" class=\"href\">документации Github</a> .",
+	"privacypolicy_title": "Политика конфиденциальности",
+	"privacypolicy_lastupdated": "<strong class=\"font-semibold\">Последнее обновление:</strong> 24 августа 2025 г."
 }
