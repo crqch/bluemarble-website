@@ -6,5 +6,12 @@
 	"error_notfound_description": "Страница, на которую вы пытаетесь перейти, отсутствует.",
 	"error_title": "Произошла ошибка.",
 	"error_description": "Попробуйте ещё раз. Если ошибка не устранена, сообщите об этом.",
-	"error_refresh": "Обновите страницу"
+	"error_refresh": "Обновите страницу",
+	"error_homepage": "Вернуться на главную страницу",
+	"home_section1_title": "Не позволяй звездам быть Твоим проводником",
+	"home_section1_subtitle": "начните использовать Blue Marble для достижения идеальной точности пикселей",
+	"home_section1_cta": "Установить",
+	"home_section2_subtitle": "ФУНКЦИИ",
+	"home_section2_title": "Что предлагает Blue Marble?",
+	"home_section2_item1_title": "Наложение холста"
 }
