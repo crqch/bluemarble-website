@@ -81,5 +81,14 @@
 	"install_chromium_step4": "Включите <i>Режим разработчика</i> .",
 	"install_chromium_step5": "Включите опцию <i>Разрешить пользовательские скрипты</i>.",
 	"install_chromium_step6": "Установка в один клик",
-	"install_tampermonkey_direct": "Нажмите на эту ссылку, чтобы установить Blue Marble напрямую: <a class=\"href\" target=\"_blank\" href=\"https://github.com/SwingTheVine/Wplace-BlueMarble/releases/download/pre/BlueMarble.user.js\">Установить Blue Marble</a>. TamperMonkey автоматически обнаружит пользовательский скрипт и предложит вам установить его."
+	"install_tampermonkey_direct": "Нажмите на эту ссылку, чтобы установить Blue Marble напрямую: <a class=\"href\" target=\"_blank\" href=\"https://github.com/SwingTheVine/Wplace-BlueMarble/releases/download/pre/BlueMarble.user.js\">Установить Blue Marble</a>. TamperMonkey автоматически обнаружит пользовательский скрипт и предложит вам установить его.",
+	"install_step7": "Обновите веб-страницу <a href=\"https://wplace.live/\" target=\"_blank\" class=\"href\">wplace.live</a>.",
+	"install_firefox_step1": "Установить <a href=\"https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/\" target=\"_blank\" class=\"href\">TamperMonkey для Firefox</a>",
+	"install_edge_step1": "Установить <a href=\"https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd\" target=\"_blank\" class=\"href\">TamperMonkey для Microsoft Edge</a>",
+	"install_edge_step2": "Нажмите правой кнопкой мыши на расширение",
+	"install_edge_step3": "Нажмите левой кнопкой мыши на <i>Управление расширением</i>.",
+	"install_edge_step4": "Включите <i>Режим разработчика</i>.",
+	"install_edge_step5": "Скачайте файл <span class=\"font-mono bg-base-content/10 rounded-md\">BlueMarble.user.js</span> в разделе <i>Ресурсы</i> <a class=\"href\" target=\"_blank\" href=\"https://github.com/SwingTheVine/Wplace-BlueMarble/releases\">последней версии</a>.",
+	"install_edge_step6": "Откройте панель управления TamperMonkey.",
+	"install_edge_step7": "Перетащите файл <span class=\"font-mono bg-base-content/10 rounded-md\">BlueMarble.user.js</span> на панель управления TamperMonkey."
 }
