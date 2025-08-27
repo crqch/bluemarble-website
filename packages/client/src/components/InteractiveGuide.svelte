@@ -27,7 +27,7 @@
                 "https://5z7ci365vn.ufs.sh/f/88jSHGM4wtrPwvDCi6YIBK0FifALjkcSClygq4u7X9p5ObUe",
             steps: [
                 {
-                    time: 3.06,
+                    time: 3.22,
                     caption: m.install_chromium_step1(),
                 },
                 {
@@ -35,15 +35,15 @@
                     caption: m.install_chromium_step2(),
                 },
                 {
-                    time: 22.5,
+                    time: 23,
                     caption: m.install_chromium_step4(),
                 },
                 {
-                    time: 25.5,
+                    time: 25.4,
                     caption: m.install_chromium_step5(),
                 },
                 {
-                    time: 29.5,
+                    time: 28.5,
                     caption: m.install_video_tampermonkey_warning(),
                 },
                 {
@@ -51,7 +51,7 @@
                     caption: m.install_video_oneclick(),
                 },
                 {
-                    time: 53,
+                    time: 52.1,
                     caption: m.install_video_visitwplace(),
                 },
             ],
@@ -65,7 +65,7 @@
                     caption: m.install_firefox_step1(),
                 },
                 {
-                    time: 7.3,
+                    time: 7,
                     caption: m.install_video_oneclick(),
                 },
                 {
@@ -83,15 +83,15 @@
                     caption: m.install_edge_step1(),
                 },
                 {
-                    time: 8.6,
+                    time: 6.3,
                     caption: m.install_chromium_step2(),
                 },
                 {
-                    time: 14,
+                    time: 13.6,
                     caption: m.install_chromium_step4(),
                 },
                 {
-                    time: 18.7,
+                    time: 18.3,
                     caption: m.install_video_tampermonkey_warning_suggestion(),
                 },
                 {
@@ -99,7 +99,7 @@
                     caption: m.install_video_oneclick(),
                 },
                 {
-                    time: 36.5,
+                    time: 36,
                     caption: m.install_video_visitwplace(),
                 },
             ],
