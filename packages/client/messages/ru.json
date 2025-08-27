@@ -1,5 +1,7 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"EMOJI": "🇷🇺",
-	"NAME": "Русский"
+	"NAME": "Русский",
+	"error_notfound_title": "404 Не найдено",
+	"error_notfound_description": "Страница, на которую вы пытаетесь перейти, отсутствует."
 }
